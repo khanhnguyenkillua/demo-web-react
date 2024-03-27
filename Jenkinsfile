@@ -5,7 +5,7 @@ pipeline {
         stage('Prepare') {
             agent { label 'docker-pipeline' }
             steps {
-                //  Pull source code từ repository
+                // Pull source code từ repository
                 git 'https://github.com/khanhnguyenkillua/demo-web-react.git'
             }
         }
@@ -16,19 +16,18 @@ pipeline {
                 sh 'npm install' 
                 sh 'npm run build'
 
-                // Push Docker Image in ....
+                // Build Docker image
                 script {
-                   
-                    }
+
                 }
             }
         }
         stage('Deploy') {
             agent { label 'docker-pipeline' }
             steps {
-                // Pull Image and Deloy
+                // Pull and Deploy Docker Image
                 script {
-                 
+                   
                     }
                 }
             }

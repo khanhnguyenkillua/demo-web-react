@@ -13,12 +13,11 @@ pipeline {
             agent { label 'docker-pipeline' }
             steps {
                 // Build Stage
-                sh 'npm install' 
+                sh 'npm install'
                 sh 'npm run build'
 
                 // Build Docker image
                 script {
-
                 }
             }
         }
@@ -27,10 +26,9 @@ pipeline {
             steps {
                 // Pull and Deploy Docker Image
                 script {
-                   
-                    }
                 }
             }
         }
     }
 }
+
